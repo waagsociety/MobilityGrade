@@ -7,7 +7,7 @@ The initial focus and pilot area for MobilityGrade is [Buitenveldert](https://en
 # Concept
 MobilityGrade is a website that visualises residential mobility on a map. The aim is to have a *mobility grade*—a summary of various mobility metrics—visible for each residential address on the map. Mobility metrics may include the availability of health care, education, or grocery stores with an emphasis on travel time and accessibility.
 
-Because people have varying personal mobility—and to promote a healthy city—the means of transportation is weighed in to the overall mobility grade for each address. An address where the local library is available by bike will score higher than if a car is required. Because not everyone will be interested in visiting the library it can be excluded from the overall mobility grades using filters.
+Because people have varying personal mobility—and to promote a healthy city—the means of transportation is weighed in to the overall mobility grade for each address. An address where the local library is available by bike will score higher than if a car is required. Because not everyone will be interested in *visiting the library* it can be excluded from the overall mobility grades using filters.
 
 ![A map of Buitenveldert with a data visualisation indicating mobility for each address.](media/sketch.buitenveldert-map.jpg)
 > Initial sketch for what MobilityGrade may look like.
