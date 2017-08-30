@@ -5,6 +5,7 @@ The initial focus and pilot area for MobilityGrade is [Buitenveldert](https://en
 # Concept
 MobilityGrade is an online application with mobility metrics represented on a map. The aim is to have a *mobility grade*—a summary of various mobility metrics—visible for each address on the map. Means of transportation is weighed in to the overall mobility score for each location.
 
-![Initial sketch for what MobilityGrade may look like.](media/sketch.buitenveldert-map.jpg)
+![A map of Buitenveldert with a data visualisation indicating mobility for each address.](media/sketch.buitenveldert-map.jpg)
+> Initial sketch for what MobilityGrade may look like.
 
 
