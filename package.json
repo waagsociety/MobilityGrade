@@ -1,0 +1,19 @@
+{
+  "name": "mobility-grade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waagsociety/MobilityGrade.git"
+  },
+  "author": "Waag Society",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waagsociety/MobilityGrade/issues"
+  },
+  "homepage": "https://github.com/waagsociety/MobilityGrade#readme"
+}

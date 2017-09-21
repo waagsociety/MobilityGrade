@@ -1,0 +1,1 @@
+export const join = separator => array => array.join(separator)

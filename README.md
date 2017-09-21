@@ -12,4 +12,13 @@ Because people have varying personal mobility—and to promote a healthy city—
 ![A map of Buitenveldert with a data visualisation indicating mobility for each address.](media/sketch.buitenveldert-map.jpg)
 > Initial sketch for what MobilityGrade may look like.
 
+# Requirements
+- [Node.js](https://nodejs.org/)
+- [NPM](https://www.npmjs.com/)
+- [A browser with module support](http://caniuse.com/#feat=es6-module)
 
+# Server
+The server is responsible for data queries to various Google Maps API’s. To start the server navigate to the `/server` directory and run `npm install` & `key=<Google-Maps-API-key> npm start`. The server will be available on [localhost:4000](http://localhost:4000).
+
+# Client
+The client does queries to the server and compiles data to a mobility grade for an address (zipcode for now). To get the client started serve `index.html` at the `/client` directory using a web server.
