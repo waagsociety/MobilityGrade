@@ -4,7 +4,8 @@ const graphql = require('express-graphql')
 const { schemas } = require('./graphql')
 
 const app = express()
-const root = [__dirname, 'public'].join('/')
+
+app.use(express.static('public'))
 
 Object.keys(schemas).forEach(route => {
   const schema = schemas[route]  

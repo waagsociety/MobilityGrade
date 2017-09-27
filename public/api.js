@@ -12,6 +12,7 @@ const createMatrixQuery = createGraphQuery(endpoint + 'distancematrix', 'results
 
 const joinComma = join(',')
 const getGeometry = get('geometry')
+const getDataGeometry = get('data', 'geometry')
 const getResults = get('data', 'results')
 const getTopResult = get('data', 'results', 0)
 
@@ -19,6 +20,7 @@ const mapResults = map(getResults)
 const mapTopResult = map(getTopResult)
 
 const mapResolveJSON = pipe(map(resolveJSON), x => Promise.all(x))
+
 const mapDestinationsQuery = pipe(
   map(pipe(getGeometry, joinComma)), 
   join('|')
@@ -31,8 +33,9 @@ const promiseAssert = (assert, message) => value => new Promise((resolve, reject
 const mapToObject = (key, array) => object => 
   array.map(item => assign({ [key]: item }, object))
 
-const mapToArray = (key, array) => locations => 
-  locations.map((location, index) => assign(location, { [key]: array[index] }))
+const mapToArray = (key, array) => locations => {
+  return locations.map((location, index) => assign(location, { [key]: array[index] }))
+}
 
 const mapTypesToSearchQuery = types => pipe(
   mapToObject('type', types), 
@@ -44,22 +47,18 @@ const mapModesToMatrixQuery = modes => pipe(
   map(createMatrixQuery)
 )
 
-const getAddressGeometry = address =>
-  fetch(createGeometryQuery({ address }))
-    .then(resolveJSON)
-    .then(result => result.data.geometry)
-
-
 export const getPointsOfInterest = (address, modes, types) => {
   
   const mapLocationType = mapToArray('type', types)
   const createSearchQueries = mapTypesToSearchQuery(types)
   const createMatrixQueries = mapModesToMatrixQuery(modes)
   
-  return getAddressGeometry(address)
+  return fetch(createGeometryQuery({ address }))
+    .then(resolveJSON)
+    .then(getDataGeometry)
     .then(promiseAssert(Array.isArray, "Expects an array"))
     .then(geometry => {
-      
+
       const origins = joinComma(geometry)
       return queue.fetch(createSearchQueries({ location: origins }))
         .then(mapResolveJSON)

@@ -1,0 +1,94 @@
+* {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html, body, nav {
+  background: #eee;
+  height: 100%;
+}
+
+.container {
+  padding: 1em 5em;
+  margin-left: 24em;
+}
+
+.panel {
+  height: 100vh;
+  width: 24em;
+  position: fixed;
+  box-shadow: 0 0 0 1px silver;
+  overflow: hidden;
+}
+
+.panel ul {
+  top: 3.5em;
+  bottom: 3.5em;
+  width: 100%;
+}
+
+.panel li {
+  padding: 1em 0;
+  position: relative;
+  display: block;
+}
+
+.panel li + li { border-top: 1px solid #ddd; }
+
+.panel label {
+  padding: 1em 0 0 1.5em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.panel section {
+  padding: 0.5em;
+  height: 3.5em;
+  width: 100%;
+  box-shadow: 0 0 1px 0 gray;
+  position: absolute;
+}
+
+.panel section.content {
+  padding: 0 0.5em;
+  background: white;
+  height: auto;
+  top: 3.5em;
+  bottom: 3.5em;
+  box-shadow: none;
+}
+
+.panel section.header { z-index: 100 }
+.panel section.footer { bottom: 0 }
+
+
+.panel input[type=text] {
+  height: 2.5em;
+  display: block;
+  width: 100%;
+  padding: 1em;
+}
+
+.tabs li {
+  width: 33.33%;
+  display: inline-block;
+  padding: 0.75em;
+}
+
+.tabs li label {
+  padding: 0.75em 0 0 2em;
+}
+
+.tabs li + li {
+  border: none;
+  border-left: 1px solid #ccc;
+}
