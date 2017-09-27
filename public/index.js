@@ -1,7 +1,7 @@
 import { pluck } from './util.js'
 import { getPointsOfInterest } from './api.js'
 
-import Store from './store.js'
+import Store from './Store.js'
 import MobilityGrade from './MobilityGrade.js'
 import View from './view.js'
 
