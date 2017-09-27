@@ -30,10 +30,6 @@ function defineQuery(endpoint, config) {
 
 function defineQueryFetch(endpoint, config) {
   const transform = defineQuery(endpoint, config)
-  return query => {
-    console.log(transform(query))
-    return fetch(transform(query))
-      .then(response => response.json())
-  }
+  return query => fetch(transform(query)).then(response => response.json())
 }
 

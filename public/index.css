@@ -15,8 +15,29 @@ html, body, nav {
 }
 
 .container {
-  padding: 1em 5em;
+  padding: 2em 5em;
   margin-left: 24em;
+}
+
+.container ul ul {
+  margin: 0.25em 0 1em
+}
+
+.container li {
+  display: block;
+  padding: 0.2em 0;
+  line-height: 1.5;
+}
+
+.container li[hidden] { display: none }
+
+.container ul ul li {
+  opacity: 0.5;
+}
+
+.container .active,
+.container .active h1 {
+  opacity: 1;
 }
 
 .panel {
@@ -69,7 +90,6 @@ html, body, nav {
 
 .panel section.header { z-index: 100 }
 .panel section.footer { bottom: 0 }
-
 
 .panel input[type=text] {
   height: 2.5em;

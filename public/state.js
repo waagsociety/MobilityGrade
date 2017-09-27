@@ -11,20 +11,32 @@ export const state = {
     },
     { 
       key: 'bicycling',
-      treshold: 15,
-      weigth: 0.8, 
+      treshold: 10,
+      weigth: 1, 
       active: true
     },
     { 
       key: 'driving',
-      treshold: 30,
-      weigth: 0.4, 
-      active: true
+      treshold: 10,
+      weigth: 1, 
+      active: false
     },
   ],
   types: [
     {
+      key: 'grocery_or_supermarket',
+      active: true,
+    },
+    {
+      key: 'department_store',
+      active: true,
+    },
+    {
       key: 'atm',
+      active: true,
+    },
+    {
+      key: 'doctor',
       active: true,
     },
     {
@@ -32,8 +44,12 @@ export const state = {
       active: true,
     },
     {
-      key: 'department_store',
-      active: true,
+      key: 'gas_station',
+      active: false,
     },
+    {
+      key: 'hair_care',
+      active: false,
+    }
   ]
 }

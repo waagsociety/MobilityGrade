@@ -43,8 +43,13 @@ module.exports = new GraphQLSchema({
           type: { type: GraphQLString },
           keyword: { type: GraphQLString },
         },
-        resolve: (root, query) => queryMapsSearch(query).then(data => data.results)
+        resolve: (root, query) => queryMapsSearch(query).then(data => log(data.results))
       }
     })
   })
 })
+
+function log(value) {
+  console.log(value)
+  return value
+}
