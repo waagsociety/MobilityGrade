@@ -1,3 +1,6 @@
+import response from './response.js'
+
+
 export const state = {
   query: '',
   loading: false,
@@ -26,23 +29,23 @@ export const state = {
     {
       key: 'grocery_or_supermarket',
       active: true,
-    },
-    {
-      key: 'department_store',
-      active: true,
-    },
+    },    
     {
       key: 'atm',
-      active: true,
-    },
-    {
-      key: 'doctor',
       active: true,
     },
     {
       key: 'hospital',
       active: true,
     },
+    {
+      key: 'department_store',
+      active: true,
+    },
+    {
+      key: 'doctor',
+      active: true,
+    },    
     {
       key: 'gas_station',
       active: false,

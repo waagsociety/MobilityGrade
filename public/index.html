@@ -20,6 +20,21 @@
 
   <section id="report" class="container"></section>
 
+  <section class="container">
+    <svg id="graph" width="1024" heigth="1024" viewBox="-256 -256 512 512">  
+      
+      <circle cx="0" cy="0" r="80" stroke-width="1" stroke="#999" fill="none" />      
+      <circle cx="0" cy="0" r="160" stroke-width="1" stroke="#bbb" fill="none" />
+      <circle cx="0" cy="0" r="240" stroke-width="1" stroke="#ddd" fill="none" />
+      <text y="-245" fill="#666" text-anchor="middle">30min</text>
+      <text y="-165" fill="#666" text-anchor="middle">20min</text>
+      <text y="-85" fill="#666" text-anchor="middle">10min</text>
+      <circle cx="0" cy="0" r="1" fill="#333" />
+      <g id="points"></g>
+      
+    </svg>
+  </section>
+
   <script type="module" src="index.js"></script>
 </body>
 </html>

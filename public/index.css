@@ -10,13 +10,14 @@
 }
 
 html, body, nav {
-  background: #eee;
+  /*background: #eee;*/
   height: 100%;
 }
 
 .container {
   padding: 2em 5em;
   margin-left: 24em;
+  max-width: 30%;
 }
 
 .container ul ul {
@@ -33,6 +34,10 @@ html, body, nav {
 
 .container ul ul li {
   opacity: 0.5;
+}
+
+h1 {
+  line-height: 1.4;
 }
 
 .container .active,
@@ -55,7 +60,7 @@ html, body, nav {
 }
 
 .panel li {
-  padding: 1em 0;
+  padding: 1.2em 0;
   position: relative;
   display: block;
 }
@@ -63,7 +68,7 @@ html, body, nav {
 .panel li + li { border-top: 1px solid #ddd; }
 
 .panel label {
-  padding: 1em 0 0 1.5em;
+  padding: 1.2em 0 0 1.5em;
   position: absolute;
   left: 0;
   top: 0;
@@ -75,12 +80,12 @@ html, body, nav {
   padding: 0.5em;
   height: 3.5em;
   width: 100%;
-  box-shadow: 0 0 1px 0 gray;
+  box-shadow: 0 0 0 1px #ccc;
   position: absolute;
 }
 
 .panel section.content {
-  padding: 0 0.5em;
+  padding: 0 1em;
   background: white;
   height: auto;
   top: 3.5em;
@@ -95,7 +100,7 @@ html, body, nav {
   height: 2.5em;
   display: block;
   width: 100%;
-  padding: 1em;
+  padding: 1em 0.5em;
 }
 
 .tabs li {
@@ -110,5 +115,33 @@ html, body, nav {
 
 .tabs li + li {
   border: none;
-  border-left: 1px solid #ccc;
+  /*border-left: 1px solid #ccc;*/
 }
+
+svg {
+  height: 100%;
+  width: 50%;
+  float: right;
+  right: 0;
+  position: absolute;
+  top: 0;
+  padding: 2em;
+}
+
+svg[hidden] {
+  display: none;
+}
+
+text {
+  font-size: 10px;
+  text-align: center;
+  background: blue;
+  box-shadow: 0 0 2px 0 blue;
+}
+
+g circle { fill: rgba(0,0,0,0.2) }
+g circle.active { fill: #000 }
+
+
+
+
