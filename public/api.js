@@ -3,7 +3,7 @@ import { resolveJSON, createGraphQuery } from './util.js'
 import ThrottledQueue from './ThrottledQueue.js'
 
 const geo = '52.32243649999999,4.890777'
-const endpoint = 'http://localhost:4000/api/'
+const endpoint = '/api/'
 
 const queue = new ThrottledQueue(25)
 const createSearchQuery = createGraphQuery(endpoint + 'search', 'results', ['id', 'name', 'geometry'])
