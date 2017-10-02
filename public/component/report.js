@@ -9,7 +9,6 @@ export const report = new Component('report', store => {
   const modeActivity = pluckActiveKey(modes)
   const report = result && createReport(result, modes, types)
   const score = report && mean(report.filter(isActive).map(x => x.score)) || 0
-  console.log(score)
 
   return report 
     ? createElement('ul', { className: 'report' }, report.map(reportItem(modeActivity)))

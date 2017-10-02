@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const graphql = require('express-graphql')
 const { schemas } = require('./graphql')
+const { port = 4000 } = process.env
 
 const app = express()
 
@@ -13,5 +14,5 @@ Object.keys(schemas).forEach(route => {
   app.get(`/api/${route}`, cors(), graphql({ schema })) 
 })
 
-app.listen(4000)
+app.listen(port)
 console.log('listening...')

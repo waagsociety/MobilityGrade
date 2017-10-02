@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "start": "GoogleMapsAPIKey=$key node index.js",
+    "start": "GoogleMapsAPIKey=$key port=$port node index.js",
     "test": "test"
   },
   "dependencies": {
